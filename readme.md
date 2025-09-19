@@ -4,7 +4,7 @@
 
 This assignment explores how **Instruction-Level Parallelism (ILP)** techniques—such as pipelining, branch prediction, superscalar execution, and simultaneous multithreading (SMT)—affect processor performance. Using the **gem5 simulator**, we run controlled experiments with a simple workload (`hello` program) and collect pipeline traces, performance statistics, and visualizations.
 
-## 📂 Repository Layout
+## Repository Layout
 
 ```
 assignment4/
@@ -24,6 +24,7 @@ assignment4/
 │   ├── tournament_predictor_result.png
 │   ├── multithreading_run.png
 │   ├── multithreading_result.png
+|   └── super_scalar_run.png
 │   └── super_scalar_result.png
 │
 ├── tables/           # Processed CSV tables for easier reporting
@@ -33,7 +34,7 @@ assignment4/
 └── README.md         # This file
 ```
 
-## ⚙️ How to Reproduce
+## How to Reproduce
 
 ### 1. Baseline Pipeline Simulation
 
@@ -84,21 +85,21 @@ Tournament Predictor:
 Runs two threads sharing a single core.
 
 
-## 📊 Results
+## Results
 
 * **Tables:** See `tables/branch_prediction_baseline.csv` and `tables/multiple_issue_smt.csv` for collected IPC, cycles, and misprediction counts.
 * **Screenshots:** Pipeline traces, predictor runs, and SMT runs are in `screenshots/`.
 * **Raw Stats:** Full stats dumps are stored in `results/`.
 
 
-## 🔍 Key Takeaways
+## Key Takeaways
 
 * **Baseline Pipeline:** Establishes reference IPC (\~0.1 with `hello`, due to its small footprint).
 * **Branch Prediction:** No visible difference on `hello` (too few branches), but real workloads benefit.
 * **Superscalar:** Wider issue width shows modest IPC gain if independent instructions exist.
 * **SMT:** Improves throughput by overlapping threads, though per-thread IPC remains limited.
 
-## 📖 References
+## References
 
 * Hennessy, J. L., & Patterson, D. A. (2019). *Computer Architecture: A Quantitative Approach* (6th ed.). Morgan Kaufmann.
 * gem5 Simulator. (2025). *gem5 Documentation*. Retrieved from [https://www.gem5.org](https://www.gem5.org)
