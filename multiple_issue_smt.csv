@@ -1,0 +1,5 @@
+Config,Issue Width,Threads,IPC (per thread),Total IPC,Cycles,Notes
+Baseline,1,1,0.101896,0.101896,56077,"Single-issue, 1 thread"
+Superscalar (2×),2,1,0.170571,0.170571,33423,Wider issue on one core
+SMT (2 threads),1,2,0.14437,0.288739,39489,Two threads share a core
+Tournament Pred.,1,1,0.101896,0.101896,56077,Same width/threads as baseline; only predictor differs

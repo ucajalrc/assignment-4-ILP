@@ -1,0 +1,4 @@
+Config,IPC,Cycles,Branch Mispreds,Latency (avg cycles/instr)
+Baseline (pipeline),0.101896,56077,0,9.813966
+Static Predictor,0.101896,56077,0,9.813966
+Tournament Predictor,0.101896,56077,0,9.813966
